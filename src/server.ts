@@ -1,5 +1,5 @@
 import express from "express";
-import "faculdadeRoutes" from "../routes/FaculdadeRoutes.js";
+import faculdadeRoutes from "../src/routes/FaculdadeRoutes.js";
 import {AppDataSource} from "./database.js";
 
 const app = express();

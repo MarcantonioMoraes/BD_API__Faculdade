@@ -1,13 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
-require("faculdadeRoutes");
-from;
-"../routes/FaculdadeRoutes.js";
+var FaculdadeRoutes_js_1 = require("../routes/FaculdadeRoutes.js");
 var database_js_1 = require("./database.js");
 var app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use("/faculdades", faculdadeRoutes);
+app.use("/faculdades", FaculdadeRoutes_js_1.default);
 database_js_1.AppDataSource.initialize()
     .then(function () {
     console.log("Conexão com o banco de dados estabelecida com sucesso.");

@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm";
-import { Disciplina } from "./Disciplina";
+import { Disciplina } from "./Disciplina.js";
 
 @Entity("turma")
 export class Turma {
