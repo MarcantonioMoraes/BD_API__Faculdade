@@ -1,9 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm";
-import { Disciplina } from "./Disciplina.js";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("turma")
 export class Turma {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColum()
     id!: number;
 
     @Column({
@@ -13,16 +12,8 @@ export class Turma {
     })
     nome!: string;
 
-    @Column({
-        type: "varchar",
-        length: 20,
-        nullable: false
-    })
+    @Column()
     semestre!: string;
-
-    @ManyToOne(() => Disciplina)
-    @JoinColumn({ name: "id_disciplina" })
-    disciplina!: Disciplina;
 
     @Column()
     id_disciplina!: number;
