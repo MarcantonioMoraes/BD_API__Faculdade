@@ -3,8 +3,8 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity("turma")
 export class Turma {
     @PrimaryGeneratedColumn({
-        type: "int",
-        unsigned: true
+    type: "int",
+     unsigned: true
     })
     id!: number;
 
