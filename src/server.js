@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
-var FaculdadeRoutes_js_1 = require("../routes/FaculdadeRoutes.js");
+var FaculdadeRoutes_js_1 = require("../src/routes/FaculdadeRoutes.js");
 var database_js_1 = require("./database.js");
 var app = (0, express_1.default)();
 app.use(express_1.default.json());

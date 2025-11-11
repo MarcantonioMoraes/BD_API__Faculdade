@@ -24,7 +24,7 @@ export class Turma {
 
     @Column({
         type: "int",
-        nullable: false
+        unsigned: true,
     })
     id_disciplina!: number;
 }
