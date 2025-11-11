@@ -16,4 +16,10 @@ export class FaculdadeController {
         return await repoTurma.query(sql);
     }
 
+    async updateTurma(turma: Turma): Promise<Turma[] | null> {
+       const {id, nome, semestre, id_disciplina} = turma;
+       const sql = "UPDATE turma SET nome = $1, semestre = $2, id_disciplina = $3 WHERE id = $4 RETURNING *";
+       const turmas = await repoTurma.query(sql, [nome, semestre, id_disciplina, id]);
+       return turmas;
+    }
 };
