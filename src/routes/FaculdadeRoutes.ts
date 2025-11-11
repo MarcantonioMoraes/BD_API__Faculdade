@@ -16,5 +16,10 @@ router.get("/tuma",async (req, res)=> {
     res.json(turma);
 });
 
+router.put("/tuma",async (req, res)=> {
+    const turma = await faculdadeController.updateTurma(req.body);
+    res.json(turma);
+});
+
 
 export default router;
