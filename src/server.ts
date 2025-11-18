@@ -1,12 +1,13 @@
 import express from "express";
 import faculdadeRoutes from "../src/routes/FaculdadeRoutes.js";
 import {AppDataSource} from "./database.js";
+import app from "./app.js";
 
-const app = express();
-app.use(express.json());
-app.use("/faculdades", faculdadeRoutes);
+// const app = express();
+// app.use(express.json());
+// app.use("/faculdades", faculdadeRoutes);
 
-
+const app = new app
 AppDataSource.initialize()
 .then(() => {
     console.log("Conexão com o banco de dados estabelecida com sucesso.");
