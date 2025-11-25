@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { FaculdadeController } from "../controller/FaculdadeController";
 // Importa as definições do Swagger (não é usado no código, mas o swagger-jsdoc lê os comentários)
+// O arquivo tem apenas efeitos colaterais e não expõe tipos; silenciaremos o erro de compilação.
+// @ts-ignore: module with only side-effects doesn't have type declarations
 import "../config/swagger.routes.config";
 
 const router = Router()
