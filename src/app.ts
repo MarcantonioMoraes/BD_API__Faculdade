@@ -1,25 +1,25 @@
-import { Express } from "express";
-import { FaculdadeController } from "./controller/FaculdadeController.js";
+import express, { Express } from "express";
 import { Description, ExpressInitializer, SwaggerEndpoint, SwaggerInitializer, Title, Version } from "express-swagger-autoconfigure";
-
+import { FaculdadeController } from "./controller/FaculdadeController";
 
 @SwaggerInitializer
-@SwaggerEndpoint("/docs")
-@Description('APP da Faculdade ')
+@SwaggerEndpoint("/doc")
+@Description("API de Faculdade")
 @Version("1.0.0")
 @Title("API Faculdade")
-export default  class app{
+export default class App {
     @ExpressInitializer
     public app!: Express;
-
-    constructor(){
-        this.initcontroller();
+    
+    constructor() {
+        this.initControllers();
     }
-    private initcontroller(): void {
+
+    private initControllers() {
         new FaculdadeController();
     }
-    public getApp(): Express {
+
+    public getApp() {
         return this.app;
     }
-    
-};
+}

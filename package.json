@@ -1,36 +1,29 @@
 {
   "name": "bd_api__faculdade",
   "version": "1.0.0",
-  "description": "Uma API com Banco de dados para cadatros em uma faculdade",
+  "description": "",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "dev": "tsc src/server.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MarcantonioMoraes/BD_API__Faculdade.git"
-  },
+    "start": "ts-node-dev src/server.ts"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MarcantonioMoraes/BD_API__Faculdade/issues"
-  },
-  "homepage": "https://github.com/MarcantonioMoraes/BD_API__Faculdade#readme",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "express-swagger-autoconfigure": "^2.1.1",
     "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "typeorm": "^0.3.27"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.0",
+    "@types/swagger-ui-express": "^4.1.8",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }

@@ -2,10 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("turma")
 export class Turma {
-    @PrimaryGeneratedColumn({
-    type: "int",
-     unsigned: true
-    })
+    @PrimaryGeneratedColumn()
     id!: number;
 
     @Column({
@@ -15,16 +12,9 @@ export class Turma {
     })
     nome!: string;
 
-    @Column({
-        type: "varchar",
-        length: 50,
-        nullable: false
-    })
+    @Column()
     semestre!: string;
 
-    @Column({
-        type: "int",
-        unsigned: true,
-    })
+    @Column()
     id_disciplina!: number;
 }
