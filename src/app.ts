@@ -1,5 +1,5 @@
 import express, { Express } from "express";
-import { Description, ExpressInitializer, SwaggerEndpoint, SwaggerInitializer, Title, Version } from "express-swagger-autoconfigure";
+import { Description, ExpressInitializer, SwaggerEndpoint, SwaggerInitializer, Title, Version } from "./types/express-swagger-autoconfigure";
 import { FaculdadeController } from "./controller/FaculdadeController";
 
 @SwaggerInitializer
